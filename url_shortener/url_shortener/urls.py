@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from url_shortener_app.views import MainPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', MainPage.as_view())
 ]
