@@ -5,6 +5,12 @@
     <title>url_shortner</title>
 </head>
 <body>
-
+    <h1>URL shortner</h1><br>
+    <form method="post">
+        {% csrf_token %}
+        <label for="user_url">Enter URL</label>
+        <input name="user_url" id="user_url" type="url" placeholder="https://www.google.com"><br>
+        <button type="submit">Create link</button>
+    </form>
 </body>
 </html>

@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from url_shortener_app.views import MainPage
+from url_shortener_app.views import MainPage, UrlOutput
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', MainPage.as_view())
+    path('home/', MainPage.as_view(), name='homepage'),
+    path('new_url/', UrlOutput.as_view(), name='url_output')
 ]
